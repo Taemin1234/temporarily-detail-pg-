@@ -80,37 +80,82 @@
   </head>
   <body>
     <header>
+      <!-- 메뉴 바 -->
       <nav class="navbar">
         <div class="flex-navbar">
           <div class="logo">
-            <a href="#">
+            <a href="../index.html">
               <img src="../logos/payeat.png" alt="" class="top-logo" />
             </a>
           </div>
 
           <ul class="gnb topnav myTopnav">
-            <li><a href="#">회사 소개</a></li>
+            <li><a href="../index.html">회사 소개</a></li>
             <li class="dropdown">
               <a href="../detail-main/data101-detail.html" class="dropbtn">
                 서비스 소개
               </a>
               <ul class="lnb dropdown-content">
-                <li><a href="#data101" class="scroll-move">데이터101</a></li>
-                <li><a href="#food101" class="scroll-move">푸드101</a></li>
-                <li><a href="#payeat" class="scroll-move">페이잇</a></li>
+                <li>
+                  <a href="./data101-detail.html" class="scroll-move"
+                    >데이터101</a
+                  >
+                </li>
+                <li>
+                  <a href="./food101-detail.html" class="scroll-move"
+                    >푸드101</a
+                  >
+                </li>
+                <li>
+                  <a href="./payeat-detail.html" class="scroll-move">페이잇</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../detail-main/data101-detail.html" class="dropbtn">
+                인재채용
+              </a>
+              <ul class="lnb dropdown-content">
+                <li>
+                  <a href="../recruit/info.html" class="scroll-move"
+                    >채용정보</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/welfare.html" class="scroll-move"
+                    >복리후생</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/line.html" class="scroll-move"
+                    >승진제도</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/recruit-inquiry.html" class="scroll-move"
+                    >채용문의</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../center/gallery.html" class="dropbtn"> 고객센터 </a>
+              <ul class="lnb dropdown-content">
+                <li>
+                  <a href="../center/gallery.html" class="scroll-move"
+                    >갤러리</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
-          <a
-            href="javascript:void(0);"
-            class="menu-icon"
-            onclick="myFunction()"
+          <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()"
+            >☰</a
           >
-            ☰
-          </a>
         </div>
       </nav>
     </header>
+
     <div class="sub-main">
       <div class="sub-menu">
         <a href="./data101-detail.html">데이터101</a>
@@ -139,12 +184,12 @@
               <div class="info-box-txt">
                 <h4>학교에서의 이점</h4>
                 <p>
-                  &bull; 1차 업체의 부도 및 도산시 약정서에 따라<br />
+                  1차 업체의 부도 및 도산시 약정서에 따라<br />
                   식재료를 안전결제 서비스에서 공급합니다.
                 </p>
                 <span>&nbsp;</span>
                 <p>
-                  &bull; 어떤 문제가 있더라도 안정적인<br />
+                  어떤 문제가 있더라도 안정적인<br />
                   식재료를 공급 받을 수 있습니다.
                 </p>
               </div>
@@ -155,12 +200,12 @@
               <div class="info-box-txt">
                 <h4>1차 업체의 이점</h4>
                 <p>
-                  &bull; 매달 예측 불가능한 매출로 인하여<br />
+                  매달 예측 불가능한 매출로 인하여<br />
                   자금운영의 어려움을 해소할 수 있습니다.
                 </p>
                 <span>&nbsp;</span>
                 <p>
-                  &bull; 1차 - 2차 업체의 정산기간을 단축하여<br />
+                  1차 - 2차 업체의 정산기간을 단축하여<br />
                   시간 및 인건비를 절약할 수 있습니다.
                 </p>
               </div>
@@ -171,12 +216,12 @@
               <div class="info-box-txt">
                 <h4>2차 업체의 이점</h4>
                 <p>
-                  &bull; 대금지급에 대한 불안을 해소하여 <br />
+                  대금지급에 대한 불안을 해소하여 <br />
                   1차 업체와의 신뢰 회복
                 </p>
                 <span>&nbsp;</span>
                 <p>
-                  &bull; 운영자금을 확보하여 보다 경쟁력있는 <br />
+                  운영자금을 확보하여 보다 경쟁력있는 <br />
                   물품을 공급 할 수 있습니다.
                 </p>
               </div>
@@ -398,6 +443,31 @@
         </div>
       </div>
     </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-web">
+        <div class="footer-logo">
+          <img src="../logos/payeat.png" alt="" />
+          <img src="../logos/venture-confirm-align.png" alt="" />
+        </div>
+        <div class="footer-contents">
+          페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
+          경상북도 경산시 대학로 280, 영남대학교 창업센터 212호
+          <br />사업자번호 : 176-88-01702<br />
+          통신판매업번호 : 제2021-대구수성구-0014호
+        </div>
+        <div class="footer-cs">
+          <p>Contact</p>
+          <ul>
+            <li>전화 : 1544-5202</li>
+            <li>팩스 : 0504-390-7321</li>
+            <li>이메일 : help@payeat.co.kr</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
+    </footer>
 
     <!-- payeat js -->
     <script src="../js/wow.js.다운로드"></script>

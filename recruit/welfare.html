@@ -62,6 +62,7 @@
     <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/pc.css" />
 
     <!-- jquery -->
     <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
@@ -94,42 +95,38 @@
               </a>
               <ul class="lnb dropdown-content">
                 <li>
-                  <a href="./data101-detail.html" class="scroll-move"
+                  <a
+                    href="../detail-main/data101-detail.html"
+                    class="scroll-move"
                     >데이터101</a
                   >
                 </li>
                 <li>
-                  <a href="./food101-detail.html" class="scroll-move"
+                  <a
+                    href="../detail-main/food101-detail.html"
+                    class="scroll-move"
                     >푸드101</a
                   >
                 </li>
                 <li>
-                  <a href="./payeat-detail.html" class="scroll-move">페이잇</a>
+                  <a
+                    href="../detail-main/payeat-detail.html"
+                    class="scroll-move"
+                    >페이잇</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="../detail-main/data101-detail.html" class="dropbtn">
-                인재채용
-              </a>
+              <a href="./info.html" class="dropbtn"> 인재채용 </a>
               <ul class="lnb dropdown-content">
+                <li><a href="./info.html" class="scroll-move">채용정보</a></li>
                 <li>
-                  <a href="../recruit/info.html" class="scroll-move"
-                    >채용정보</a
-                  >
+                  <a href="./welfare.html" class="scroll-move">복리후생</a>
                 </li>
+                <li><a href="./line.html" class="scroll-move">승진제도</a></li>
                 <li>
-                  <a href="../recruit/welfare.html" class="scroll-move"
-                    >복리후생</a
-                  >
-                </li>
-                <li>
-                  <a href="../recruit/line.html" class="scroll-move"
-                    >승진제도</a
-                  >
-                </li>
-                <li>
-                  <a href="../recruit/recruit-inquiry.html" class="scroll-move"
+                  <a href="./recruit-inquiry.html" class="scroll-move"
                     >채용문의</a
                   >
                 </li>
@@ -154,54 +151,97 @@
     </header>
 
     <div class="sub-main">
-      <div class="sub-menu">
-        <a href="./data101-detail.html" class="active">데이터101</a>
-        <a href="./food101-detail.html">푸드101</a>
-        <a href="./payeat-detail.html">페이잇</a>
+      <div class="sub-menu sm-recruit">
+        <a href="./info.html">채용정보</a>
+        <a href="./welfare.html" class="active">복리후생</a>
+        <a href="./line.html">승진제도</a>
+        <a href="./recruit-inquiry.html">채용문의</a>
       </div>
     </div>
+
     <main>
       <section>
-        <div class="page-setting">
-          <div class="detail-main data101-detail">
-            <h2 class="detail-title">DATA101</h2>
-            <h4>인공지능 식단추천 서비스</h4>
-            <h4>서비스 준비 중입니다.</h4>
+        <div class="sub_content sub_wel">
+          <h4><strong>복리후생</strong></h4>
+
+          <div class="welfare_wrap">
+            <div
+              class="welfare_box"
+              data-aos="fade-right"
+              data-aos-easing="ease"
+              data-aos-delay="100"
+            >
+              <img src="./img/welfare1.svg" />
+              <h7>회사생활 지원</h7>
+              <div>4대 보험, 주5일 근무<br />장기근속자 포상</div>
+            </div>
+            <div
+              class="welfare_box"
+              data-aos="fade-right"
+              data-aos-easing="ease"
+              data-aos-delay="200"
+            >
+              <img src="./img/welfare2.svg" />
+              <h7>경조사 지원</h7>
+              <div>경조사 비품<br />경조사 휴가<br />경조사 비</div>
+            </div>
+            <div
+              class="welfare_box"
+              data-aos="fade-right"
+              data-aos-easing="ease"
+              data-aos-delay="300"
+            >
+              <img src="./img/welfare3.svg" />
+              <h7>휴가 및 여가활동 지원</h7>
+              <div>
+                하계 휴가 지원 및 휴가비<br />명절 귀향비<br />사내 동호회
+                활동<br />정기적 회식
+              </div>
+            </div>
+            <div
+              class="welfare_box"
+              data-aos="fade-right"
+              data-aos-easing="ease"
+              data-aos-delay="400"
+            >
+              <img src="./img/welfare4.svg" />
+              <h7>각종 편의제공</h7>
+              <div>사내식당<br />티테이블</div>
+            </div>
           </div>
         </div>
+        <script>
+          AOS.init();
+        </script>
       </section>
-      <section>
-        <div class="page-setting"></div>
-      </section>
-      <section>
-        <div class="page-setting"></div>
+      <section style="padding-top: 0">
+        <footer class="footer">
+          <div class="footer-web">
+            <div class="footer-logo">
+              <img src="../logos/payeat.png" alt="" />
+              <img src="../logos/venture-confirm-align.png" alt="" />
+            </div>
+            <div class="footer-contents">
+              페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
+              경상북도 경산시 대학로 280, 영남대학교 창업센터 212호
+              <br />사업자번호 : 176-88-01702<br />
+              통신판매업번호 : 제2021-대구수성구-0014호
+            </div>
+            <div class="footer-cs">
+              <p>Contact</p>
+              <ul>
+                <li>전화 : 1544-5202</li>
+                <li>팩스 : 0504-390-7321</li>
+                <li>이메일 : help@payeat.co.kr</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="copyright">
+            Copyright &copy Payeat Corp. All Rights Reserved
+          </p>
+        </footer>
       </section>
     </main>
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer-web">
-        <div class="footer-logo">
-          <img src="../logos/payeat.png" alt="" />
-          <img src="../logos/venture-confirm-align.png" alt="" />
-        </div>
-        <div class="footer-contents">
-          페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
-          경상북도 경산시 대학로 280, 영남대학교 창업센터 212호
-          <br />사업자번호 : 176-88-01702<br />
-          통신판매업번호 : 제2021-대구수성구-0014호
-        </div>
-        <div class="footer-cs">
-          <p>Contact</p>
-          <ul>
-            <li>전화 : 1544-5202</li>
-            <li>팩스 : 0504-390-7321</li>
-            <li>이메일 : help@payeat.co.kr</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
-    </footer>
   </body>
 </html>

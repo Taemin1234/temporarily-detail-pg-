@@ -74,6 +74,8 @@
     <!-- slick slider -->
     <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css" />
+
+    <script src="../js/app.js"></script>
   </head>
   <body>
     <header>
@@ -81,21 +83,68 @@
       <nav class="navbar">
         <div class="flex-navbar">
           <div class="logo">
-            <a href="#">
+            <a href="../index.html">
               <img src="../logos/payeat.png" alt="" class="top-logo" />
             </a>
           </div>
 
           <ul class="gnb topnav myTopnav">
-            <li><a href="#">회사 소개</a></li>
+            <li><a href="../index.html">회사 소개</a></li>
             <li class="dropdown">
               <a href="../detail-main/data101-detail.html" class="dropbtn">
                 서비스 소개
               </a>
               <ul class="lnb dropdown-content">
-                <li><a href="#data101" class="scroll-move">데이터101</a></li>
-                <li><a href="#food101" class="scroll-move">푸드101</a></li>
-                <li><a href="#payeat" class="scroll-move">페이잇</a></li>
+                <li>
+                  <a href="./data101-detail.html" class="scroll-move"
+                    >데이터101</a
+                  >
+                </li>
+                <li>
+                  <a href="./food101-detail.html" class="scroll-move"
+                    >푸드101</a
+                  >
+                </li>
+                <li>
+                  <a href="./payeat-detail.html" class="scroll-move">페이잇</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../detail-main/data101-detail.html" class="dropbtn">
+                인재채용
+              </a>
+              <ul class="lnb dropdown-content">
+                <li>
+                  <a href="../recruit/info.html" class="scroll-move"
+                    >채용정보</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/welfare.html" class="scroll-move"
+                    >복리후생</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/line.html" class="scroll-move"
+                    >승진제도</a
+                  >
+                </li>
+                <li>
+                  <a href="../recruit/recruit-inquiry.html" class="scroll-move"
+                    >채용문의</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../center/gallery.html" class="dropbtn"> 고객센터 </a>
+              <ul class="lnb dropdown-content">
+                <li>
+                  <a href="../center/gallery.html" class="scroll-move"
+                    >갤러리</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
@@ -105,6 +154,7 @@
         </div>
       </nav>
     </header>
+
     <div class="sub-main">
       <div class="sub-menu">
         <a href="./data101-detail.html">데이터101</a>
@@ -292,5 +342,31 @@
         </div>
       </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-web">
+        <div class="footer-logo">
+          <img src="../logos/payeat.png" alt="" />
+          <img src="../logos/venture-confirm-align.png" alt="" />
+        </div>
+        <div class="footer-contents">
+          페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
+          경상북도 경산시 대학로 280, 영남대학교 창업센터 212호
+          <br />사업자번호 : 176-88-01702<br />
+          통신판매업번호 : 제2021-대구수성구-0014호
+        </div>
+        <div class="footer-cs">
+          <p>Contact</p>
+          <ul>
+            <li>전화 : 1544-5202</li>
+            <li>팩스 : 0504-390-7321</li>
+            <li>이메일 : help@payeat.co.kr</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
+    </footer>
   </body>
 </html>
