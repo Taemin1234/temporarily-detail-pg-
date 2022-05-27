@@ -62,7 +62,7 @@
     <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="./css/pc.css" />
+    <link rel="stylesheet" href="../css/pc.css" />
 
     <!-- jquery -->
     <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
@@ -88,57 +88,67 @@
           </div>
 
           <ul class="gnb topnav myTopnav">
-            <li><a href="../index.html">회사 소개</a></li>
+            <li class="dropdown">
+              <a href="../index.html" class="dropbtn"> 회사소개 </a>
+              <ul class="lnb dropdown-content">
+                <li>
+                  <a href="../introduce/vision.html">VISION</a>
+                </li>
+                <li>
+                  <a href="../introduce/ceo.html">CEO 인사말</a>
+                </li>
+                <li>
+                  <a href="../introduce/history.html">연혁</a>
+                </li>
+                <li>
+                  <a href="../introduce/group.html">조직도</a>
+                </li>
+                <li>
+                  <a href="../introduce/partner.html">Partnership</a>
+                </li>
+              </ul>
+            </li>
             <li class="dropdown">
               <a href="../detail-main/data101-detail.html" class="dropbtn">
                 서비스 소개
               </a>
               <ul class="lnb dropdown-content">
                 <li>
-                  <a
-                    href="../detail-main/data101-detail.html"
-                    class="scroll-move"
-                    >데이터101</a
-                  >
+                  <a href="../detail-main/data101-detail.html">데이터101</a>
                 </li>
                 <li>
-                  <a
-                    href="../detail-main/food101-detail.html"
-                    class="scroll-move"
-                    >푸드101</a
-                  >
+                  <a href="../detail-main/food101-detail.html">푸드101</a>
                 </li>
                 <li>
-                  <a
-                    href="../detail-main/payeat-detail.html"
-                    class="scroll-move"
-                    >페이잇</a
-                  >
+                  <a href="../detail-main/payeat-detail.html">페이잇</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="./info.html" class="dropbtn"> 인재채용 </a>
+              <a href=".info.html" class="dropbtn"> 인재채용 </a>
               <ul class="lnb dropdown-content">
-                <li><a href="./info.html" class="scroll-move">채용정보</a></li>
                 <li>
-                  <a href="./welfare.html" class="scroll-move">복리후생</a>
+                  <a href="./info.html">채용정보</a>
                 </li>
-                <li><a href="./line.html" class="scroll-move">승진제도</a></li>
                 <li>
-                  <a href="./recruit-inquiry.html" class="scroll-move"
-                    >채용문의</a
-                  >
+                  <a href="./welfare.html">복리후생</a>
+                </li>
+                <li>
+                  <a href="./line.html">승진제도</a>
+                </li>
+                <li>
+                  <a href="./gallery.html">갤러리</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="../center/gallery.html" class="dropbtn"> 고객센터 </a>
+              <a href="../center/quotation.html" class="dropbtn"> 고객센터 </a>
               <ul class="lnb dropdown-content">
                 <li>
-                  <a href="../center/gallery.html" class="scroll-move"
-                    >갤러리</a
-                  >
+                  <a href="../center/quotation.html">견적문의</a>
+                </li>
+                <li>
+                  <a href="../center/recruit-inquiry.html">채용문의</a>
                 </li>
               </ul>
             </li>
@@ -155,7 +165,7 @@
         <a href="./info.html">채용정보</a>
         <a href="./welfare.html" class="active">복리후생</a>
         <a href="./line.html">승진제도</a>
-        <a href="./recruit-inquiry.html">채용문의</a>
+        <a href="./gallery.html">갤러리</a>
       </div>
     </div>
 
@@ -171,7 +181,7 @@
               data-aos-easing="ease"
               data-aos-delay="100"
             >
-              <img src="./img/welfare1.svg" />
+              <img src="./img/welfare1.png" />
               <h7>회사생활 지원</h7>
               <div>4대 보험, 주5일 근무<br />장기근속자 포상</div>
             </div>
@@ -181,7 +191,7 @@
               data-aos-easing="ease"
               data-aos-delay="200"
             >
-              <img src="./img/welfare2.svg" />
+              <img src="./img/welfare2.png" />
               <h7>경조사 지원</h7>
               <div>경조사 비품<br />경조사 휴가<br />경조사 비</div>
             </div>
@@ -191,7 +201,7 @@
               data-aos-easing="ease"
               data-aos-delay="300"
             >
-              <img src="./img/welfare3.svg" />
+              <img src="./img/welfare3.png" />
               <h7>휴가 및 여가활동 지원</h7>
               <div>
                 하계 휴가 지원 및 휴가비<br />명절 귀향비<br />사내 동호회
@@ -204,7 +214,7 @@
               data-aos-easing="ease"
               data-aos-delay="400"
             >
-              <img src="./img/welfare4.svg" />
+              <img src="./img/welfare4.png" />
               <h7>각종 편의제공</h7>
               <div>사내식당<br />티테이블</div>
             </div>
