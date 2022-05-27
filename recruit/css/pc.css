@@ -1692,6 +1692,10 @@ ul.slick-dots li.slick-active button {
 .sub_light img {
   margin: 0 auto;
 }
+.sub_content strong {
+  font-weight: 700;
+}
+
 .sub_info .info_box {
   position: relative;
   display: flex;
