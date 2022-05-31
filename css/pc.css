@@ -1855,6 +1855,8 @@ ul.slick-dots li.slick-active button {
 }
 .gallery_box ul {
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .gallery_box ul:after {
@@ -1863,9 +1865,9 @@ ul.slick-dots li.slick-active button {
   clear: both;
 }
 .gallery_box ul a {
-  float: left;
-  width: 300px;
+  width: 100%;
   padding: 1%;
+  margin: 0 auto;
 }
 .gallery_box .gallery_tit {
   padding: 20px 0 10px 0;
@@ -2361,6 +2363,10 @@ ul.slick-dots li.slick-active button {
   .table_info {
     width: 100%;
   }
+
+  .gallery_box ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2492,6 +2498,10 @@ ul.slick-dots li.slick-active button {
   }
   .sub_agree {
     font-size: 15px;
+  }
+
+  .gallery_box ul {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
