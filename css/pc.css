@@ -192,6 +192,7 @@ div {
   background-color: #333333;
 }
 .pipe_long {
+  padding: 0 20px;
 }
 .pipe_long:before {
   content: "";
@@ -656,11 +657,7 @@ nav #gnb li .ico_menu {
   margin-right: 8px;
   cursor: pointer;
 }
-nav {
-  position: relative;
-  width: 100%;
-  min-width: 1024px;
-}
+
 nav #gnb_wrap {
   width: 100%;
   box-sizing: border-box;
@@ -1447,7 +1444,9 @@ ul.slick-dots li.slick-active button {
 }
 
 .sub_img {
+  background-image: url(../recruit/img/info.jpg);
   width: 100%;
+  height: 450px;
 }
 .sub_content {
   width: 100%;
@@ -1535,7 +1534,6 @@ ul.slick-dots li.slick-active button {
 .sub_gallery,
 .sub_center {
   text-align: center;
-  min-width: 1200px;
 }
 .sub_vision h4,
 .sub_history h4,
@@ -1573,6 +1571,9 @@ ul.slick-dots li.slick-active button {
   display: block;
   content: "";
   clear: both;
+}
+.sub_history .box_txt {
+  padding-right: 60px;
 }
 .sub_group h4:before {
   left: 12px;
@@ -1649,6 +1650,7 @@ ul.slick-dots li.slick-active button {
   text-align: left;
   padding-top: 20px;
 }
+
 .sub_bg {
   background: url("/img/sub_bg.png") no-repeat;
   width: 100%;
@@ -1730,16 +1732,24 @@ ul.slick-dots li.slick-active button {
 }
 .sub_info .info_content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background: #f9f9f9;
   border: 1px solid #eaeaea;
-  padding: 30px 0;
+  padding: 30px;
 }
 .sub_info .info_content .info_txt {
   letter-spacing: normal;
   font-size: 20px;
   text-align: left;
+}
+.sub_info .info_content .info_btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }
 .sub_info .info_content .info_btn .recruit-page {
   padding: 12px 25px;
@@ -1834,10 +1844,19 @@ ul.slick-dots li.slick-active button {
   letter-spacing: -0.5px;
   font-weight: 700;
 }
+
+.sub_gallery {
+  margin: 0 auto;
+}
+
 .gallery_box {
   font: 14px "Malgun Gothic";
-  width: 1200px;
+  margin: 0 auto;
 }
+.gallery_box ul {
+  margin: 0 auto;
+}
+
 .gallery_box ul:after {
   display: block;
   content: "";
@@ -1845,7 +1864,7 @@ ul.slick-dots li.slick-active button {
 }
 .gallery_box ul a {
   float: left;
-  width: 25%;
+  width: 300px;
   padding: 1%;
 }
 .gallery_box .gallery_tit {
@@ -2302,4 +2321,252 @@ ul.slick-dots li.slick-active button {
 }
 .ceter_img {
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .sub_img_ceo,
+  .sub_img_ceo img,
+  .sub_content_ceo .sub_box {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .sub_content_ceo .sub_box {
+    width: 65%;
+  }
+
+  .sub_info .sub_box h6,
+  .sub_info .sub_box .sign .box_txt,
+  .sub_info .sub_box .box_txt {
+    font-size: 18px;
+  }
+
+  .sub_info .info_box .sub_box {
+    width: 50%;
+  }
+
+  .sub_info .info_content .info_txt {
+    font-size: 17px;
+  }
+
+  .sub_info .info_content .info_btn .recruit-page {
+    font-size: 17px;
+  }
+
+  .sub_info .info_content .info_btn a {
+    width: 200px;
+  }
+
+  .sub_agree,
+  .table_info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .sub_vision .sub_tit {
+    font-size: 3vw;
+  }
+
+  .sub_history .box_txt {
+    font-size: 18px;
+  }
+
+  .sub_history .sub_tit {
+    font-size: 24px;
+  }
+
+  .sub_info .sub_box h6,
+  .sub_info .sub_box .sign .box_txt,
+  .sub_info .sub_box .box_txt {
+    font-size: 16px;
+  }
+
+  .sub_info .info_box .sub_box {
+    width: 42%;
+  }
+
+  .sub_info .info_content .info_txt {
+    font-size: 16px;
+  }
+
+  .sub_info .info_content .info_btn .recruit-page {
+    font-size: 16px;
+  }
+
+  .sub_info .info_content .info_btn a {
+    width: 120px;
+  }
+
+  .welfare_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sub_wel .welfare_box {
+    width: unset;
+  }
+
+  .table_info .plus_edit {
+    width: 79%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub_box h4 {
+    font-size: 28px;
+  }
+
+  .sub_box .box_txt {
+    font-size: 18px;
+  }
+
+  .sub_flex {
+    float: none;
+    width: 100%;
+  }
+
+  .bor_left {
+    margin-left: 100px;
+    margin-top: 50px;
+    padding-top: 0;
+
+    width: calc(100% - 100px);
+  }
+
+  .sub_history .sub_tit {
+    font-size: 20px !important;
+  }
+
+  .sub_info .info_box {
+    display: block;
+    position: unset;
+  }
+
+  .sub_info .info_box .sub_content {
+    position: unset;
+    padding: 0;
+  }
+
+  .sub_info .sub_content .sub_box {
+    float: none;
+
+    background-color: #fdd501;
+    width: 100%;
+
+    padding: 30px;
+  }
+
+  .sub_info .sub_box h6,
+  .sub_info .sub_box .sign .box_txt,
+  .sub_info .sub_box .box_txt {
+    font-size: 18px;
+  }
+
+  .pipe_long {
+    display: none;
+  }
+
+  .sub_info .info_content {
+    flex-direction: column;
+  }
+
+  .sub_info .info_content .info_btn {
+    margin-top: 30px;
+  }
+
+  .sub_info .info_content .info_txt {
+    font-size: 20px;
+  }
+
+  .sub_info .info_content .info_btn .recruit-page {
+    font-size: 20px;
+  }
+
+  .sub_info .info_content .info_btn a {
+    width: 140px;
+  }
+
+  .table_info .plus_edit {
+    width: 77%;
+  }
+  .sub_agree {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub_box h4 {
+    /* font-size: 28px; */
+  }
+
+  .sub_box .box_txt {
+    font-size: 16px !important;
+  }
+
+  .sign {
+    font-size: 20px;
+  }
+
+  .sign strong {
+    font-size: 25px;
+  }
+
+  .sub_flex {
+    padding-left: 50px;
+  }
+
+  .sub_history .sub_tit {
+    font-size: 19px;
+    padding: 0 10px;
+  }
+
+  .sub_history .box_txt {
+    font-size: 4vw !important;
+  }
+
+  .box_txt .his_year:before {
+    left: -92px;
+  }
+
+  .bor_left {
+    margin-left: 60px !important;
+    width: calc(100% - 61px) !important;
+  }
+
+  .sub_content .sub_tit {
+    font-size: 20px;
+  }
+
+  .sub_img {
+    background-position: 21%;
+  }
+
+  .sub_info .info_content .info_txt {
+    font-size: 16px;
+  }
+
+  .sub_info .info_content .info_btn .recruit-page {
+    font-size: 16px;
+  }
+
+  .sub_info .info_content .info_btn {
+    flex-direction: column;
+  }
+
+  .sub_info .info_content .info_btn a {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .welfare_wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .table_info .plus_edit {
+    width: 74%;
+  }
+  .table_info ul li .plus_tit,
+  .filebox label {
+    font-size: 15px;
+  }
 }

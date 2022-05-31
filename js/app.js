@@ -170,6 +170,8 @@ $(window).on("scroll", function () {
   } else {
     $("#payeat .short-cut-btn").css("transform", "translateY(6rem)");
   }
+
+  // console.log($("html").scrollTop());
 });
 
 // 페이잇 스토리 슬라이더
@@ -259,7 +261,5 @@ $(function scrollup992() {
         .find(".content-detail-img")
         .css("transform", "translateY(4rem)");
     }
-
-    //console.log($("html").scrollTop());
   });
 });
