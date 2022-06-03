@@ -64,6 +64,12 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/pc.css" />
 
+    <!-- 폰트어썸 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+    />
+
     <!-- jquery -->
     <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -166,30 +172,63 @@
 
     <div class="sub-main">
       <div class="sub-menu sm-recruit">
-        <a href="./vision.html" class="active">Vision</a>
+        <a href="./vision.html">Vision</a>
+
         <a href="./history.html">연혁</a>
         <a href="./group.html">조직도</a>
         <a href="./guide-visit.html">찾아오는 길</a>
       </div>
     </div>
 
-    <section>
-      <div class="sub_content">
-        <div class="sub_vision">
-          <h4><strong>VISION</strong></h4>
-          <div class="sub_tit" style="margin-bottom: 45px">
-            데이터와 일하고, 배우고, 소통하며 생활의 방식을 바꾼다.
-          </div>
-          <img
-            src="./img/vision.png"
-            data-aos="fade-up"
-            data-aos-easing="ease"
-            data-aos-delay="300"
-          />
+    <section class="guide-visit page-setting">
+      <div class="sub_content sub_center">
+        <h4><strong>찾아오는 길</strong></h4>
+      </div>
+      <div
+        class="map"
+        style="
+          max-width: 1300px;
+          height: 700px;
+
+          margin: 0 auto;
+        "
+      >
+        <div class="post-box">
+          (주)페이잇 <br />
+          <i class="fa-solid fa-location-dot"></i>
+          경상북도 경산시 대학로 280 영남대학교 (G12) 창업보육센터 212호
         </div>
-        <script>
-          AOS.init();
-        </script>
+      </div>
+      <div class="traffic-box">
+        <div class="traffic">
+          <div class="traffic-title">
+            <i class="fa-solid fa-train-subway"></i>
+            <h3>지하철</h3>
+          </div>
+          <div class="traffic-content">2호선 영남대역 2번, 3번 출구</div>
+        </div>
+        <div class="traffic">
+          <div class="traffic-title">
+            <i class="fa-solid fa-bus"></i>
+            <h3>버스</h3>
+          </div>
+          <div class="traffic-content">
+            <span>영남대 앞 기준</span>
+            <p>
+              - 109, 309, 449, 509, 609, 649, 719, 803, 809, 840, 909, 911, 918,
+              980, 991, 100번
+            </p>
+          </div>
+        </div>
+        <div class="traffic">
+          <div class="traffic-title">
+            <i class="fa-solid fa-train"></i>
+            <h3>기차</h3>
+          </div>
+          <div class="traffic-content">
+            경산역에서 버스 509, 609, 809번 탑승
+          </div>
+        </div>
       </div>
     </section>
 
@@ -202,7 +241,7 @@
             <img src="../logos/venture-confirm-align.png" alt="" />
           </div>
           <div class="footer-contents">
-            페이잇 주식회사 <br />
+            페이잇 주식회사<br />
             경상북도 경산시 대학로 280, 영남대학교 창업센터 212호
             <br />사업자번호 : 176-88-01702<br />
             통신판매업번호 : 제2021-대구수성구-0014호
