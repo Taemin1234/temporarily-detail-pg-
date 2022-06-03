@@ -191,6 +191,7 @@ ol {
   .dropbtn {
     display: flex;
     align-items: center;
+
     height: 100%;
 
     font-size: 20px;
@@ -206,6 +207,14 @@ ol {
     a {
       vertical-align: middle;
     }
+
+    .menu-arrow {
+      filter: invert(1);
+      transform: rotate(90deg);
+      height: 23px;
+
+      margin-left: 15px;
+    }
   }
 
   &:hover {
@@ -213,6 +222,10 @@ ol {
       display: block;
     }
   }
+}
+
+.menu-open {
+  display: block !important;
 }
 
 .dropdown-content {
@@ -309,9 +322,15 @@ ol {
   }
   .topnav.responsive .dropdown {
     overflow: unset;
+    width: 200px;
 
     .dropbtn {
-      display: block;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
       width: 100%;
       text-align: left;
     }
@@ -937,6 +956,10 @@ section {
 }
 
 @media (min-width: 768px) {
+  .menu-arrow {
+    display: none;
+  }
+
   .info-box-title {
     h2 {
       font-size: 2.8rem;
@@ -1309,6 +1332,7 @@ section {
 
 //상단 메인
 .sub-main {
+  position: relative;
   width: 100%;
   height: 400px;
   padding-top: 90px;
@@ -1318,11 +1342,29 @@ section {
   background-size: cover;
 }
 
+.sub-menu-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  p {
+    color: $bg-color;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
 .recruit-sm-bg {
   background-image: url(../recruit/img/recruit-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 25% 40px;
+  background-position: center center;
 }
 
 .sub-menu {
@@ -1340,7 +1382,7 @@ section {
     padding: 20px 10px;
     background: #f2f2f2;
     text-align: center;
-    font-size: 18px;
+    font-size: 21px;
 
     &.active {
       background: $theme-color;
@@ -1364,7 +1406,17 @@ section {
 
 @media (max-width: 480px) {
   .recruit-sm-bg {
-    background-position: 24% 48px;
+    background-image: url(../recruit/img/recruit-bg-m.jpg);
+    background-position: 24% center;
+  }
+
+  .sm-recruit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sm-recruit a {
+    width: 100%;
   }
 }
 @media (max-width: 627px) {
@@ -1394,6 +1446,13 @@ section {
     line-height: 1.4;
     color: $border-color;
   }
+}
+
+// 고객센터 서브 메뉴
+.custom-sub-main {
+  background-image: url(../center/img/center-bg.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
 .food101-detail {
@@ -1615,16 +1674,70 @@ section {
   }
 }
 
-.service-prepare {
-  width: 83vw;
-  height: 50vh;
-  background-image: url(../img/prepare.jpg);
+//food101 상세 페이지
+
+// 연혁
+.history-bg {
+  background-image: url(../introduce/img/history-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center center;
+  background-size: cover;
 }
 
-//food101 상세 페이지
+//찾아오는 길
+
+.map {
+  position: relative;
+}
+
+.post-box {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background-color: $theme-color;
+  line-height: 1.5;
+
+  font-size: 20px;
+}
+
+.traffic-box {
+  width: 100%;
+  margin-top: 30px;
+
+  .traffic {
+    margin-bottom: 30px;
+  }
+
+  .traffic:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.traffic-title {
+  @extend %flex-start;
+  padding: 20px;
+
+  i {
+    font-size: 27px;
+    margin-right: 10px;
+  }
+}
+
+.traffic-content {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+
+  border-top: #000 solid 1px;
+
+  p {
+    margin-top: 15px;
+  }
+}
 
 /* footer */
 .footer {

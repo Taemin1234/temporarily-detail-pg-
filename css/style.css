@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(./normalize.css);
 @import url("https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css");
-.detail-text-head, .content-detail-text ul li {
+.traffic-title, .detail-text-head, .content-detail-text ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -171,8 +171,18 @@ ol {
 .dropdown .dropbtn a {
   vertical-align: middle;
 }
+.dropdown .dropbtn .menu-arrow {
+  filter: invert(1);
+  transform: rotate(90deg);
+  height: 23px;
+  margin-left: 15px;
+}
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.menu-open {
+  display: block !important;
 }
 
 .dropdown-content {
@@ -251,9 +261,15 @@ ol {
 
   .topnav.responsive .dropdown {
     overflow: unset;
+    width: 200px;
   }
   .topnav.responsive .dropdown .dropbtn {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
     width: 100%;
     text-align: left;
   }
@@ -768,6 +784,10 @@ section:nth-child(even) {
   }
 }
 @media (min-width: 768px) {
+  .menu-arrow {
+    display: none;
+  }
+
   .info-box-title h2 {
     font-size: 2.8rem;
   }
@@ -1069,6 +1089,7 @@ section:nth-child(even) {
 }
 /* 상세보기 페이지 */
 .sub-main {
+  position: relative;
   width: 100%;
   height: 400px;
   padding-top: 90px;
@@ -1077,11 +1098,27 @@ section:nth-child(even) {
   background-size: cover;
 }
 
+.sub-menu-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sub-menu-title h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+.sub-menu-title p {
+  color: #f9f9f9;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
 .recruit-sm-bg {
   background-image: url(../recruit/img/recruit-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 25% 40px;
+  background-position: center center;
 }
 
 .sub-menu {
@@ -1098,7 +1135,7 @@ section:nth-child(even) {
   padding: 20px 10px;
   background: #f2f2f2;
   text-align: center;
-  font-size: 18px;
+  font-size: 21px;
 }
 .sub-menu a.active {
   background: #2d9675;
@@ -1116,7 +1153,17 @@ section:nth-child(even) {
 
 @media (max-width: 480px) {
   .recruit-sm-bg {
-    background-position: 24% 48px;
+    background-image: url(../recruit/img/recruit-bg-m.jpg);
+    background-position: 24% center;
+  }
+
+  .sm-recruit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sm-recruit a {
+    width: 100%;
   }
 }
 @media (max-width: 627px) {
@@ -1142,6 +1189,12 @@ section:nth-child(even) {
   font-size: 4vw;
   line-height: 1.4;
   color: #777;
+}
+
+.custom-sub-main {
+  background-image: url(../center/img/center-bg.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
 .food101-detail h2 {
@@ -1313,13 +1366,57 @@ section:nth-child(even) {
     border-bottom: none;
   }
 }
-.service-prepare {
-  width: 83vw;
-  height: 50vh;
-  background-image: url(../img/prepare.jpg);
+.history-bg {
+  background-image: url(../introduce/img/history-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center center;
+  background-size: cover;
+}
+
+.map {
+  position: relative;
+}
+
+.post-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background-color: #2d9675;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.traffic-box {
+  width: 100%;
+  margin-top: 30px;
+}
+.traffic-box .traffic {
+  margin-bottom: 30px;
+}
+.traffic-box .traffic:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.traffic-title {
+  padding: 20px;
+}
+.traffic-title i {
+  font-size: 27px;
+  margin-right: 10px;
+}
+
+.traffic-content {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  border-top: #000 solid 1px;
+}
+.traffic-content p {
+  margin-top: 15px;
 }
 
 /* footer */
