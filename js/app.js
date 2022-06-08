@@ -1,9 +1,9 @@
 // 메뉴바
 
 $(function () {
-  $(".menu-icon").on("click", function () {
-    $(".topnav").toggleClass("responsive");
-  });
+  // $(".menu-icon").on("click", function () {
+  //   $(".topnav").toggleClass("responsive");
+  // });
 
   //메뉴버튼 클릭 시 스크롤이 되면서 이동
   $(".scroll-move").click(function (event) {
@@ -11,35 +11,95 @@ $(function () {
 
     $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
   });
-});
 
-// $(function () {
-//   //resize: 브라우저 창 너비의 변경된 값을 width 변수에 저장
-//   $(window).resize(function () {
-//     var width = $(window).width();
-//     if (width >= 992) {
-//       console.log("992 이상");
-//     } else if (width >= 768 && width < 992) {
-//       console.log("768 이상");
-//     } else if (width < 768) {
-//       console.log("768 이하");
-//     }
-//   });
+  // 모바일에서 메뉴 버튼 클릭 시 2차 메뉴 나타나고 다른 메뉴 닫기
 
-//   $(window).trigger("resize"); //강제로 호출하는 함수
-// });
+  // $(this)
+  //   .find(".dropdown")
+  //   .click(function () {
+  //     var $thisContent = $(this).find(".dropdown-content");
 
-//메인 페이지 사진
-/*$(function () {
-  $(".main-img").slick({
-    Infinity: true,
-    slidesToShow: 1,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 8000,
+  //     $thisContent.toggleClass("menu-open");
+  //     $(".dropdown-content").not($thisContent).removeClass("menu-open");
+  //   });
+
+  $(".menu-icon").click(function () {
+    var $clicked = $(this);
+    var nowAnimating = $clicked.attr("data-ico-now-animating");
+
+    /* 만약 토글 사이드바 버튼의 요소가 Y가 되면 */
+    if (nowAnimating == "Y") {
+      return;
+      /* 함수를 리턴하여 다시 안눌리게 한다 */
+    }
+
+    /* 만약 클릭된 버튼에 active 클래스가 있다면 */
+    if ($clicked.hasClass("active")) {
+      /* 사이드바를 없앤다 */
+      hideRightSideBar();
+    } else {
+      /* active 클래스가 없으면 나타나게 한다 */
+      showRightSideBar();
+    }
+
+    /* 아이콘의 색을 변경 */
+    $clicked.attr("data-ico-now-animating", "Y");
+
+    /* 아이콘에 active 클래스가 없으면 active 클래스를 넣어주고 있으면 빼줌 */
+    $clicked.toggleClass("active");
+
+    /* 버튼 아이콘의 색이 변한 후에 0.4초 뒤에 다시 원래색으로 돌아오게 만듬 */
+    setTimeout(function () {
+      $clicked.attr("data-ico-now-animating", "N");
+    }, 400);
+  });
+
+  /* 왼쪽 사이드바 함수 */
+  function showRightSideBar() {
+    /* 메뉴바가 나올때 안에 펼쳐져 있는 메뉴들을 다 접기위해 엑티브를 없앤다 */
+    $(".right-sidebar > .menu-1 ul > li.active").removeClass("active");
+    $(".right-sidebar-box").addClass("active");
+  }
+  function hideRightSideBar() {
+    $(".right-sidebar-box").removeClass("active");
+  }
+
+  /* 메뉴 접히고 펼치기 */
+  $(".right-sidebar > .menu-1 ul > li").click(function (e) {
+    //console.log("메뉴 클릭됨");
+
+    /* 만약 클릭된 메뉴에 엑티브 클래스가 있으면 */
+    if ($(this).hasClass("active")) {
+      /* 클릭된 메뉴의 엑티브를 없앤다 */
+      $(this).removeClass("active");
+    } else {
+      /* 클릭된 메뉴의 형제의 엑티브를 없앤다 */
+      $(this).siblings(".active").removeClass("active");
+
+      /* 클릭된 메뉴(지역)의 엑티브를 없앤다 */
+      $(this).find(".active").removeClass("active");
+
+      /* 클릭된 메뉴의 엑티브를 만든다 */
+      $(this).addClass("active");
+    }
+
+    /* 클릭된 메뉴 안에 다른 메뉴를 클릭하면 위에있는 메뉴가 같이 클릭되는데 그것을 막아준다 */
+    e.stopPropagation();
+  });
+
+  /* 좌측 사이드바 배경을 클릭했을때 */
+  $(".right-sidebar-box").click(function () {
+    //console.log('배경클릭');
+
+    /* 토글 사이드바 버튼을 클릭한 효과를 만듬 */
+    $(".menu-icon").click();
+  });
+
+  /* 사이드바를 클릭하면 상위 요소인 배경을 클릭을 방지 */
+  $(".right-sidebar").click(function (e) {
+    e.stopPropagation();
   });
 });
-*/
 
 // 메인 글자 타이핑
 $(window).ready(function () {
