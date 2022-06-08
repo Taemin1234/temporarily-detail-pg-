@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kor-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이잇(PAYEAT) | 월간식단연구소(데이터101), 푸드101, 페이잇</title>
+    <meta
+      name="description"
+      content="빅데이터를 통한 가치 창출, 지능형 실시간 빅데이터분석 통합 플랫폼, 급식 생태계의 가치사슬(식단, 가격, 유통)을 기반으로 데이터 기반 급식시장을 선도히는 기업"
+    />
+    <meta
+      name="keywords"
+      content="급식, 학교급식, 안전결제, 데이터, 페이잇, 데이터101"
+    />
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon 설정 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/payeat_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/payeat_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/payeat_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/payeat_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/payeat_favicon/safari-pinned-tab.svg"
+      color="#2d9675"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./css/pc.css" />
+  </head>
+  <body>
+    <!-- 본문 컨테이너 -->
+    <div id="container" class="login_bg">
+      <div class="login_bg_wrap">
+        <div class="login_box">
+          <div class="login_content">
+            <nav>
+              <div class="admin_logo">
+                <img src="./img/payeat.png" alt="로고" />
+              </div>
+            </nav>
+            <div class="form_login">
+              <form
+                name="UserLogin"
+                method="post"
+                onsubmit="fnUserLoginCheck1()"
+              >
+                <input
+                  type="text"
+                  name="UserId"
+                  value=""
+                  maxlength="20"
+                  placeholder="아이디를 입력해주세요"
+                  class="textbox"
+                  autofocus=""
+                  required=""
+                />
+                <input
+                  type="password"
+                  name="UserPwd"
+                  value=""
+                  maxlength="20"
+                  placeholder="비밀번호를 입력해주세요"
+                  class="textbox marginTop10"
+                  required=""
+                />
+                <button type="submit" class="confirm_btn">
+                  <span>로그인</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="login_img"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

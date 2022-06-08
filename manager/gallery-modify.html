@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="kor-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이잇(PAYEAT) | 월간식단연구소(데이터101), 푸드101, 페이잇</title>
+    <meta
+      name="description"
+      content="빅데이터를 통한 가치 창출, 지능형 실시간 빅데이터분석 통합 플랫폼, 급식 생태계의 가치사슬(식단, 가격, 유통)을 기반으로 데이터 기반 급식시장을 선도히는 기업"
+    />
+    <meta
+      name="keywords"
+      content="급식, 학교급식, 안전결제, 데이터, 페이잇, 데이터101"
+    />
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon 설정 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/payeat_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/payeat_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/payeat_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/payeat_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/payeat_favicon/safari-pinned-tab.svg"
+      color="#2d9675"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./css/pc.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="admin_logo">
+          <img src="./img/payeat-white.png" alt="로고" />
+        </div>
+      </nav>
+      <div class="nav_login">
+        <!-- 로그인했을때 보여지는 상단 글입니다. 로그아웃도 가능해야합니다 -->
+        운영자님 환영합니다<span>|</span><a href="">로그아웃</a>
+      </div>
+    </header>
+
+    <!-- 본문 컨테이너 -->
+    <div id="container">
+      <div id="left_box">
+        <a href="./gallery.html" class="cate_tit active">갤러리관리</a>
+        <a href="./manage-quotation.html" class="cate_tit">견적문의관리</a>
+        <a href="./manage-recruit.html" class="cate_tit">채용문의관리</a>
+      </div>
+      <div id="right_box">
+        <div class="list_box">
+          <div class="list_top">
+            <div class="btn_box">
+              <a href="./gallery-modify.html" class="de_btn">수정</a>
+              <div
+                class="del_btn"
+                onClick="window.confirm('삭제하시겠습니까?');"
+              >
+                삭제
+              </div>
+              <a href="./gallery-add.html" class="ac_btn"
+                ><span>+</span>갤러리등록</a
+              >
+            </div>
+          </div>
+          <div class="table_info">
+            <table>
+              <thead>
+                <tr>
+                  <th class="ga_chk"><input type="checkbox" /></th>
+                  <th class="ga_cell">번호</th>
+                  <th class="ga_tit">제목</th>
+                  <th class="ga_des">설명</th>
+                  <th class="ga_wri">작성자</th>
+                  <th class="ga_date">작성일</th>
+                  <th class="ga_num">조회수</th>
+                  <th class="ga_view"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- tr클릭시 오른쪽의 화면에 해당 컨텐츠가 보여야합니다 -->
+                <?php for($i=0; $i<15; $i++){ ?>
+                <tr>
+                  <!-- 수정이나 .ga_chk 클릭시 오른쪽의 화면에 해당 컨텐츠가 보여야합니다 -->
+                  <td class="ga_chk"><input type="checkbox" /></td>
+                  <td class="ga_cell">001</td>
+                  <td class="ga_tit">경북대학교 취업박람회</td>
+                  <td class="ga_des">
+                    경북대학교에서 열린 취업박람회 현장입니다
+                  </td>
+                  <td class="ga_wri">운영자</td>
+                  <td class="ga_date">21.8.26</td>
+                  <td class="ga_num">1,251</td>
+                  <td class="ga_view">
+                    <a
+                      href="./preview.html"
+                      onclick="window.open(this.href, '_blank', 'width=900,height=800'); return false;"
+                      class="btn_selet"
+                      >미리보기</a
+                    >
+                  </td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+            <div class="btn_wrap">
+              <div id="pageing" class="pagenation_wrap">
+                <ul>
+                  <li class="active">1</li>
+                  <li onclick="CheckSearch(2)">2</li>
+                  <li onclick="CheckSearch(3)">3</li>
+                  <li onclick="CheckSearch(4)">4</li>
+                  <li onclick="CheckSearch(5)">5</li>
+                  <li onclick="CheckSearch(2)">다음</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list_box">
+          <div class="plus_top">
+            <div class="list_tit">갤러리 수정</div>
+            <div class="btn_box">
+              <a href="./gallery.html" class="de_btn">취소</a>
+              <div
+                href=""
+                class="ac_btn"
+                onClick="window.confirm('수정하시겠습니까?');"
+              >
+                <span>+</span>수정
+              </div>
+            </div>
+          </div>
+          <div class="table_info">
+            <ul class="table_line">
+              <li class="table_ga2">
+                <div class="plus_tit">번호</div>
+                <div class="plus_cell">1</div>
+                <div class="plus_tit">작성자</div>
+                <div class="plus_name">운영자</div>
+              </li>
+              <li class="table_ga2">
+                <div class="plus_tit">작성일</div>
+                <div class="plus_date">21.08.26</div>
+                <div class="plus_tit">조회수</div>
+                <div class="plus_num">1,261</div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">제목</div>
+                <div class="plus_title">
+                  <input
+                    type="text"
+                    name="plus_title"
+                    value=""
+                    maxlength="50"
+                    placeholder=""
+                    class="textbox"
+                  />
+                </div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">설명</div>
+                <div class="plus_des">
+                  <input
+                    type="text"
+                    name="plus_des"
+                    value=""
+                    maxlength="50"
+                    placeholder=""
+                    class="textbox"
+                  />
+                </div>
+              </li>
+              <!-- 사진등록시 아래의 li가 추가됩니다 -->
+              <li class="table_ga">
+                <div class="plus_tit">사진등록 1</div>
+                <div class="plus_file">
+                  <div class="table_file">
+                    <div class="filebox">
+                      <label for="ex_file">불러오기</label
+                      ><input type="file" id="ex_file" />
+                    </div>
+                    <input
+                      type="text"
+                      id="attFile"
+                      name="attFile"
+                      value=""
+                      placeholder="파일명"
+                      readonly="readonly"
+                      class="textbox"
+                    />
+                    <div class="ac_btn"><span>+</span>추가</div>
+                  </div>
+                </div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">사진등록 2</div>
+                <div class="plus_file">
+                  <div class="table_file">
+                    <div class="filebox">
+                      <label for="ex_file">불러오기</label
+                      ><input type="file" id="ex_file" />
+                    </div>
+                    <input
+                      type="text"
+                      id="attFile"
+                      name="attFile"
+                      value=""
+                      placeholder="파일명"
+                      readonly="readonly"
+                      class="textbox"
+                    />
+                    <div class="de_btn">삭제</div>
+                  </div>
+                </div>
+              </li>
+              <script>
+                //첨부파일 경로 적용
+                $(function () {
+                  $("#attFile").val("파일명");
+                  $("#ex_file").change(function () {
+                    var i = $(this).val();
+                    $("#attFile").val(i);
+                  });
+                });
+              </script>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer></footer>
+  </body>
+</html>

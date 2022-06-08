@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="kor-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이잇(PAYEAT) | 월간식단연구소(데이터101), 푸드101, 페이잇</title>
+    <meta
+      name="description"
+      content="빅데이터를 통한 가치 창출, 지능형 실시간 빅데이터분석 통합 플랫폼, 급식 생태계의 가치사슬(식단, 가격, 유통)을 기반으로 데이터 기반 급식시장을 선도히는 기업"
+    />
+    <meta
+      name="keywords"
+      content="급식, 학교급식, 안전결제, 데이터, 페이잇, 데이터101"
+    />
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon 설정 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/payeat_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/payeat_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/payeat_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/payeat_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/payeat_favicon/safari-pinned-tab.svg"
+      color="#2d9675"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./css/pc.css" />
+  </head>
+
+  <body>
+    <!-- 헤더 시작 -->
+    <header>
+      <nav>
+        <div class="admin_logo">
+          <img src="./img/payeat-white.png" alt="로고" />
+        </div>
+      </nav>
+      <div class="nav_login">
+        <!-- 로그인했을때 보여지는 상단 글입니다. 로그아웃도 가능해야합니다 -->
+        운영자님 환영합니다<span>|</span><a href="">로그아웃</a>
+      </div>
+    </header>
+
+    <!-- 본문 컨테이너 -->
+    <div id="container">
+      <div id="left_box">
+        <a href="./gallery.html" class="cate_tit">갤러리관리</a>
+        <a href="./manage-quotation.html" class="cate_tit active"
+          >견적문의관리</a
+        >
+        <a href="./manage-recruit.html" class="cate_tit">채용문의관리</a>
+      </div>
+      <div id="right_box">
+        <div class="list_box">
+          <div class="list_top">
+            <div class="btn_box">
+              <a href="./gallery-modify.html" class="de_btn">수정</a>
+              <div
+                class="del_btn"
+                onClick="window.confirm('삭제하시겠습니까?');"
+              >
+                삭제
+              </div>
+            </div>
+          </div>
+          <div class="table_info">
+            <table>
+              <thead>
+                <tr>
+                  <th class="ga_chk"><input type="checkbox" /></th>
+                  <th class="ga_company">회사명</th>
+                  <th class="ga_name">이름</th>
+                  <th class="ga_cname">부서명</th>
+                  <th class="ga_phone">일반전화</th>
+                  <th class="ga_date">날짜</th>
+                  <th class="ga_complete">문의확인</th>
+                  <th class="ga_name">담당자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- tr클릭시 해당 문의내역이 오른쪽 화면에 나타나야합니다 -->
+
+                <tr>
+                  <td class="ga_chk"><input type="checkbox" /></td>
+                  <td class="ga_company">다솔엔지니어링</td>
+                  <td class="ga_name">홍길동</td>
+                  <td class="ga_cname">마케팅팀</td>
+                  <td class="ga_phone">01012341234</td>
+                  <td class="ga_date">21.08.26</td>
+                  <td class="ga_complete">
+                    <a href="" class="light_btn">확인</a>
+                  </td>
+                  <td class="ga_name">운영자</td>
+                </tr>
+
+                <tr>
+                  <td class="ga_chk"><input type="checkbox" /></td>
+                  <td class="ga_company">다솔엔지니어링</td>
+                  <td class="ga_name">홍길동</td>
+                  <td class="ga_cname">마케팅팀</td>
+                  <td class="ga_phone">01012341234</td>
+                  <td class="ga_date">21.08.26</td>
+                  <td class="ga_complete">
+                    <div class="line_btn">문의완료</div>
+                  </td>
+                  <td class="ga_name">운영자</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="btn_wrap">
+              <div id="pageing" class="pagenation_wrap">
+                <ul>
+                  <li class="active">1</li>
+                  <li onclick="CheckSearch(2)">2</li>
+                  <li onclick="CheckSearch(3)">3</li>
+                  <li onclick="CheckSearch(4)">4</li>
+                  <li onclick="CheckSearch(5)">5</li>
+                  <li onclick="CheckSearch(2)">다음</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list_box">
+          <div class="plus_top">
+            <div class="list_tit">문의내용</div>
+            <div class="btn_box">
+              <a href="./counseling-modify.html" class="de_btn">수정</a>
+              <a class="print_btn">저장</a>
+            </div>
+          </div>
+          <div class="table_info">
+            <ul class="table_line">
+              <li class="table_ga">
+                <div class="plus_tit">회사명</div>
+                <div class="plus_company">다솔엔지니어링</div>
+                <div class="plus_tit">이름</div>
+                <div class="plus_name">홍길동</div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">부서명</div>
+                <div class="plus_cname">마케팅팀</div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">일반전화</div>
+                <div class="plus_phone">01012341234</div>
+                <div class="plus_tit">날짜</div>
+                <div class="plus_date">21.08.26</div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">첨부파일</div>
+                <!-- 문의에 첨부한 파일을 다운받을 수 있게 해주세요 -->
+                <div class="plus_down">
+                  <a href="">견적서.pdf</a
+                  ><a class="line_btn mg_10">다운받기</a>
+                </div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">문의내용</div>
+                <div class="plus_edit pa_l10">견적문의 드립니다.</div>
+              </li>
+              <li class="table_ga">
+                <div class="plus_tit">조치결과</div>
+                <div class="plus_edit pa_l10">상담완료되었습니다.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
