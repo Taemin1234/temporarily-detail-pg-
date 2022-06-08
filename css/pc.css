@@ -2477,7 +2477,7 @@ ul.slick-dots li.slick-active button {
   }
 
   .sub_history .sub_tit {
-    font-size: 20px !important;
+    font-size: 19px !important;
   }
 
   .sub_info .info_box {
@@ -2588,6 +2588,10 @@ ul.slick-dots li.slick-active button {
 
   .sub_img {
     background-position: 21%;
+  }
+
+  .sub_content h4 {
+    margin-top: 30px;
   }
 
   .sub_info .info_content .info_txt {
