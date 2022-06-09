@@ -1497,13 +1497,13 @@ ul.slick-dots li.slick-active button {
   font-size: 25px;
 }
 .box_txt .his_year:nth-child(1):before {
-  content: "2013";
+  content: "2022";
 }
 .box_txt .his_year:nth-child(2):before {
-  content: "2012";
+  content: "2021";
 }
 .box_txt .his_year:nth-child(3):before {
-  content: "2011";
+  content: "2020";
 }
 .box_txt .his_year:nth-child(4):before {
   content: "2010";
@@ -1576,6 +1576,9 @@ ul.slick-dots li.slick-active button {
 .sub_group h4:before {
   left: 12px;
   bottom: 50px;
+}
+.sub_group img {
+  margin: 0 auto;
 }
 .sub_partner h4:before {
   left: 85px;
@@ -1918,13 +1921,13 @@ ul.slick-dots li.slick-active button {
 }
 .gallery_box .gallery_photo img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
+  top: 78px; /*이미지 들어오면 0*/
+  left: 72px;
+  width: 50%; /*이미지 들어오면 100%*/
+  /* min-width: 100%; */
+  height: 44%; /*이미지 들어오면 100%*/
   transition: all ease 0.2s;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .gallery_box a li {
   padding-bottom: 15%;

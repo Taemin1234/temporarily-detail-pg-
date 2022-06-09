@@ -1476,6 +1476,20 @@ section {
   background-position: center center;
 }
 
+.intro-sub-main {
+  background-image: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.detail-sub-main {
+  background-image: url(../img/detail-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .sub-menu {
   position: relative;
   top: 280px;
@@ -1818,6 +1832,7 @@ section {
   height: 100px;
   padding: 20px;
   background-color: $theme-color;
+  color: $white;
   line-height: 1.5;
 
   font-size: 20px;
@@ -1981,25 +1996,17 @@ section {
   letter-spacing: 1px;
   padding-top: 16px;
   margin-right: 15px;
+
+  ul {
+    @extend %flex-start;
+  }
 }
 
-.footer-cs {
-  margin-top: 20px;
-  line-height: 1.5;
-  text-align: left;
-}
-.footer-cs p {
-  font-size: 20px;
-  font-weight: bold;
-  color: $black;
-}
-.footer-cs ul {
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-align: left;
-
-  margin: 10px 0;
+.footer-contents li::after {
+  content: " ";
+  height: 10px;
+  width: 2px;
+  background: red;
 }
 
 .copyright {
