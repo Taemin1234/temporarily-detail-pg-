@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라망피자</title>
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="../super-m.css" />
+  </head>
+  <body>
+    <div class="login_web">
+      <div class="web_box">
+        <div class="web_right"></div>
+        <div class="form_login">
+          <nav>
+            <div class="admin_logo">
+              <img src="../img/라망 가로.png" alt="로고" />
+            </div>
+          </nav>
+          <form name="UserLogin" method="post" onsubmit="fnUserLoginCheck1()">
+            <input
+              type="text"
+              name="UserId"
+              value=""
+              maxlength="20"
+              placeholder="아이디를 입력해주세요"
+              class="textbox"
+              autofocus=""
+              required=""
+            />
+            <input
+              type="password"
+              name="UserPwd"
+              value=""
+              maxlength="20"
+              placeholder="비밀번호를 입력해주세요"
+              class="textbox marginTop10"
+              required=""
+            />
+            <button type="submit" class="confirm_btn">
+              <span>로그인</span>
+            </button>
+          </form>
+          <div class="login_copy">
+            © 2020 by Lamain. All rights are reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
