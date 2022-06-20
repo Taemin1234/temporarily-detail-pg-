@@ -593,6 +593,23 @@ input.textbox::placeholder {
   color: #fff;
   font-weight: 500;
 }
+.btn_reset {
+  border: 1px solid #eee;
+  background-color: #eee;
+  -webkit-background-color: #eee;
+  display: block;
+  overflow: hidden;
+  width: 80px;
+  height: 28px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-left: 8px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+
+  cursor: pointer;
+}
 a.btn_type {
   color: #fff;
 }
@@ -852,7 +869,6 @@ a.kakao_btn .kakao_i i {
   z-index: 3;
 }
 #adheader nav {
-  width: 100%;
   background: none;
   border-top: none;
 }
@@ -868,10 +884,10 @@ a.kakao_btn .kakao_i i {
 #adheader .nav_login {
   color: #ddd;
   font-size: 13px;
-  width: 240px;
   justify-content: center;
   align-items: center;
   padding: 19px 0;
+  padding-right: 20px;
 }
 #adheader .nav_login a {
   color: #ddd;
@@ -990,7 +1006,6 @@ a.kakao_btn .kakao_i i {
   margin: 40px 0 10px;
 }
 .list_search {
-  width: 1652px;
   background: #fff;
   border: 1px solid #ddd;
   padding: 30px;
@@ -998,9 +1013,9 @@ a.kakao_btn .kakao_i i {
 }
 .list_box {
   position: relative;
-  width: 595px;
+  width: 33%;
   float: left;
-  min-width: 595px;
+
   background: #fff;
   border: 1px solid #ddd;
   padding: 30px;
@@ -1011,8 +1026,7 @@ a.kakao_btn .kakao_i i {
 .list_box:nth-child(2) {
   float: left;
   margin-right: 17px;
-  width: 1040px;
-  min-width: 1040px;
+  width: 65%;
 }
 .mini_box {
   width: 620px !important;
@@ -1294,7 +1308,7 @@ a.kakao_btn .kakao_i i {
   height: 28px;
 }
 .list_box .table_line li .ad_table_tit {
-  width: 20%;
+  width: 25%;
   display: flex;
   padding: 15px 5px;
   background: #f9f9f9;
@@ -1304,7 +1318,7 @@ a.kakao_btn .kakao_i i {
   justify-content: center;
 }
 .list_box .table_line li .ad_table {
-  width: 80%;
+  width: 75%;
   display: flex;
   padding: 7px 10px;
   align-items: center;
@@ -1411,23 +1425,24 @@ input.textbox {
   display: inline-block;
 }
 .search_ad .search_rbtn {
-  width: 430px;
+  width: 460px;
 }
-.search_ad .search_rbtn li:first-child {
-  float: left;
+.search_ad .search_rbtn li,
+.search_ad .search_rbtn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
-.search_ad .search_rbtn li:last-child {
-  float: right;
-}
+
 .search_ad .search_rbtn li > .textbox2 {
   width: calc(100% - 88px);
-  float: left;
   height: 28px;
 }
 .search_ad .search_rbtn li > .btn_type {
   width: 80px;
   margin-left: 8px;
-  float: right;
   height: 28px;
   font-size: 14px;
 

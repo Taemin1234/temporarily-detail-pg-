@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라망피자-관리자</title>
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="../super-m.css" />
+
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header id="adheader">
+      <nav>
+        <div class="admin_logo">라망피자</div>
+      </nav>
+      <div class="nav_login">
+        <!-- 로그인했을때 보여지는 상단 글입니다. 로그아웃도 가능해야합니다 -->
+        제로알님 환영합니다<span>| </span
+        ><a href="/web/fnc/logout.php">로그아웃</a>
+      </div>
+    </header>
+    <div class="tab_admenu">
+      <ul>
+        <li class="active"><a href="./member.html">회원관리</a></li>
+        <li><a href="./order-manage.html">주문관리</a></li>
+        <li><a href="">피자메뉴관리</a></li>
+        <li><a href="/web/notice/">공지사항</a></li>
+      </ul>
+    </div>
+
+    <!-- 본문 컨테이너 -->
+    <div id="adcontainer">
+      <div id="left_box">
+        <div class="sub_box">
+          <div class="cate_btit">회원관리</div>
+          <div class="cate_tit">
+            <a href="./member.html">회원관리</a>
+          </div>
+          <div class="cate_tit">
+            <a href="./driver.html">기사정보관리</a>
+          </div>
+          <div class="cate_tit active">
+            <a href="./driver-regi.html">기사등록</a>
+          </div>
+        </div>
+      </div>
+      <div class="sub_sbox">
+        <div class="sub_current">홈 > 기사정보관리</div>
+        <h10>기사정보관리</h10>
+      </div>
+      <div id="right_box"></div>
+    </div>
+  </body>
+</html>

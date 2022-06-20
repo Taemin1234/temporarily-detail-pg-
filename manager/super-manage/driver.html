@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,18 +53,20 @@
       <div id="left_box">
         <div class="sub_box">
           <div class="cate_btit">회원관리</div>
-          <div class="cate_tit active">
+          <div class="cate_tit">
             <a href="./member.html">회원관리</a>
           </div>
-          <div class="cate_tit"><a href="./driver.html">기사정보관리</a></div>
+          <div class="cate_tit active">
+            <a href="./driver.html">기사정보관리</a>
+          </div>
           <div class="cate_tit">
             <a href="./driver-regi.html">기사등록</a>
           </div>
         </div>
       </div>
       <div class="sub_sbox">
-        <div class="sub_current">홈 > 회원관리</div>
-        <h10>회원관리</h10>
+        <div class="sub_current">홈 > 기사정보관리</div>
+        <h10>기사정보관리</h10>
       </div>
       <div id="right_box">
         <div class="list_search">
@@ -76,7 +78,8 @@
                     <select id="MemberSearch" name="MemberSearch" onchange="">
                       <option>전체</option>
                       <option>이름</option>
-                      <option>닉네임</option>
+                      <option>아이디</option>
+                      <option>운행지역</option>
                       <option>이메일</option>
                       <option>휴대폰번호</option>
                     </select>
@@ -107,12 +110,11 @@
                 <tr>
                   <th class="ga_num">번호</th>
                   <th class="ga_name">이름</th>
-                  <th class="ga_nick">닉네임</th>
-                  <th class="ga_school">소속학교</th>
+                  <th class="ga_id">아이디</th>
+                  <th class="ga_location">운행지역</th>
                   <th class="ga_email">이메일</th>
                   <th class="ga_phone">휴대폰번호</th>
-                  <!-- <th class="ga_link">연결계정</th> -->
-                  <th class="ga_date">가입일자</th>
+                  <!-- <th class="ga_date">가입일자</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -121,13 +123,11 @@
                 <tr>
                   <td class="ga_num">1</td>
                   <td class="ga_name">버기</td>
-                  <td class="ga_nick">제로키친</td>
-                  <td class="ga_school">휘문고</td>
+                  <td class="ga_id">제로키친</td>
+                  <td class="ga_location">대구</td>
                   <td class="ga_email">zerokitchen@naver.com</td>
                   <td class="ga_phone">010.1234.5122</td>
-                  <!-- 카카오이거나 아닐 경우 '-' 이렇게 표시해주세요 -->
-                  <!-- <td class="ga_link">카카오</td> -->
-                  <td class="ga_date">21.10.21</td>
+                  <!-- <td class="ga_date">21.10.21</td> -->
                 </tr>
                 <?php } ?>
               </tbody>
@@ -177,13 +177,12 @@
                 <div class="ad_name ad_table">홍승희</div>
               </li>
               <li class="ad_line">
-                <div class="ad_table_tit">소속학교</div>
-                <!-- 카카오 계정으로 가입하여 정보가 없거나 학교 소속이 아니면 미등록-->
-                <div class="ad_pic ad_table">휘문고</div>
+                <div class="ad_table_tit">운행지역</div>
+                <div class="ad_location ad_table">대구</div>
               </li>
               <li class="ad_line">
-                <div class="ad_table_tit">닉네임</div>
-                <div class="ad_nick ad_table">제로키친</div>
+                <div class="ad_table_tit">아이디</div>
+                <div class="ad_id ad_table">제로키친</div>
               </li>
               <li class="ad_line">
                 <div class="ad_table_tit">이메일</div>
@@ -192,11 +191,6 @@
               <li class="ad_line">
                 <div class="ad_table_tit">휴대폰번호</div>
                 <div class="ad_phone ad_table">010.5123.1234</div>
-              </li>
-              <li class="ad_line">
-                <div class="ad_table_tit">연결계정</div>
-                <!-- 카카오계정 아니면 월간식단연구소를 통해 가입 -->
-                <div class="ad_link ad_table">카카오</div>
               </li>
               <li class="ad_line">
                 <div class="ad_table_tit">가입일자</div>
