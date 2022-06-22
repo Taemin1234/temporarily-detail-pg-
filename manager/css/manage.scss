@@ -1,0 +1,45 @@
+$border: 1px solid rgb(221, 221, 221);
+
+.list-wrap {
+  width: 100%;
+  background-color: #fff;
+}
+
+.regi-tbl {
+  border: 0;
+  border-top: $border;
+
+  tr {
+    border-bottom: $border;
+  }
+
+  th {
+    width: 170px;
+    text-align: center;
+    background-color: rgb(249, 249, 249);
+
+    padding: 15px 5px;
+
+    font-weight: 700px;
+  }
+
+  td {
+    padding: 7px 10px;
+  }
+
+  input {
+    border: $border;
+    border-radius: 4px;
+    height: 30px;
+    padding: 5px 10px;
+  }
+
+  button {
+    border: $border;
+    background-color: #fff;
+    padding: 6px 18px;
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+}
