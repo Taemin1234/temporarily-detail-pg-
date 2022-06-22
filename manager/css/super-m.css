@@ -2183,7 +2183,7 @@ input.textbox {
   position: relative;
 }
 .web_box .web_right {
-  background: url(./img/jeon.jpg) no-repeat;
+  background: url(../img/jeon.jpg) no-repeat;
   background-position: right;
   width: 50%;
   background-size: cover;
