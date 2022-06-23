@@ -12,21 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
 
     <link rel="stylesheet" href="../css/super-m.css" />
+    <link rel="stylesheet" href="../css/manage.css" />
 
     <link
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="../jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header id="adheader">
@@ -57,9 +51,6 @@
             <a href="./member.html">회원관리</a>
           </div>
           <div class="cate_tit"><a href="./driver.html">기사정보관리</a></div>
-          <div class="cate_tit">
-            <a href="./driver-regi.html">기사등록</a>
-          </div>
         </div>
       </div>
       <div class="sub_sbox">
@@ -70,6 +61,38 @@
         <div class="list_search">
           <div class="list_top">
             <div class="search_ad">
+              <ul class="search_rbtn">
+                <li style="margin-right: 20px">
+                  <div class="search-head">1 지역</div>
+                  <div class="cate_ga ml_10">
+                    <select
+                      id="LocationSearch1"
+                      name="LocationSearch1"
+                      onchange=""
+                    >
+                      <option>전체</option>
+                      <option>서울</option>
+                      <option>대구</option>
+                      <option>부산</option>
+                      <option>대전</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <div class="search-head">2 지역</div>
+                  <div class="cate_ga ml_10">
+                    <select
+                      id="LocationSearch2"
+                      name="LocationSearch2"
+                      onchange=""
+                    >
+                      <!-- 1지역의 도시에 있는 구,시 단위 행정단위가 들어가야합니다. -->
+
+                      <option>전체</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
               <ul class="search_rbtn">
                 <li>
                   <div class="cate_ga ml_10">
@@ -105,9 +128,11 @@
             <table>
               <thead>
                 <tr>
-                  <th class="ga_num">번호</th>
+                  <th class="ga_num">회원번호</th>
+                  <th class="ga_loca1">1 지역</th>
+                  <th class="ga_loca2">2 지역</th>
                   <th class="ga_name">이름</th>
-                  <th class="ga_nick">닉네임</th>
+                  <!-- <th class="ga_nick">닉네임</th> -->
                   <th class="ga_school">소속학교</th>
                   <th class="ga_email">이메일</th>
                   <th class="ga_phone">휴대폰번호</th>
@@ -119,9 +144,11 @@
                 <?php for($i=0; $i<20; $i++){ ?>
                 <!-- tr를 클릭하게되면 어디를 클릭해도 오른쪽 화면에 나타타게 해주세요 -->
                 <tr>
-                  <td class="ga_num">1</td>
+                  <td class="ga_num">0001</td>
+                  <td class="ga_loca1">대구</td>
+                  <td class="ga_loca2">수성구</td>
                   <td class="ga_name">버기</td>
-                  <td class="ga_nick">제로키친</td>
+                  <!-- <td class="ga_nick">제로키친</td> -->
                   <td class="ga_school">휘문고</td>
                   <td class="ga_email">zerokitchen@naver.com</td>
                   <td class="ga_phone">010.1234.5122</td>
@@ -171,6 +198,14 @@
               <li class="ad_line">
                 <div class="ad_table_tit">번호</div>
                 <div class="ad_num ad_table">1</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">지역 1</div>
+                <div class="ad_loca1 ad_table">대구</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">지역 2</div>
+                <div class="ad_loca2 ad_table">수성구</div>
               </li>
               <li class="ad_line">
                 <div class="ad_table_tit">이름</div>

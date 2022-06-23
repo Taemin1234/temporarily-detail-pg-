@@ -12,21 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
 
     <link rel="stylesheet" href="../css/super-m.css" />
+    <link rel="stylesheet" href="../css/manage.css" />
 
     <link
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <script src="../jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header id="adheader">
@@ -59,9 +54,6 @@
           <div class="cate_tit active">
             <a href="./driver.html">기사정보관리</a>
           </div>
-          <div class="cate_tit">
-            <a href="./driver-regi.html">기사등록</a>
-          </div>
         </div>
       </div>
       <div class="sub_sbox">
@@ -73,13 +65,30 @@
           <div class="list_top">
             <div class="search_ad">
               <ul class="search_rbtn">
+                <li style="margin-right: 20px">
+                  <div class="search-head">지역</div>
+                  <div class="cate_ga ml_10">
+                    <select
+                      id="LocationSearch"
+                      name="LocationSearch"
+                      onchange=""
+                    >
+                      <option>전체</option>
+                      <option>서울</option>
+                      <option>대구</option>
+                      <option>부산</option>
+                      <option>대전</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+              <ul class="search_rbtn">
                 <li>
                   <div class="cate_ga ml_10">
                     <select id="MemberSearch" name="MemberSearch" onchange="">
                       <option>전체</option>
                       <option>이름</option>
                       <option>아이디</option>
-                      <option>운행지역</option>
                       <option>이메일</option>
                       <option>휴대폰번호</option>
                     </select>
@@ -108,10 +117,11 @@
             <table>
               <thead>
                 <tr>
-                  <th class="ga_num">번호</th>
+                  <th class="ga_num">기사번호</th>
                   <th class="ga_name">이름</th>
                   <th class="ga_id">아이디</th>
                   <th class="ga_location">운행지역</th>
+                  <th class="ga_businessName">사업자명</th>
                   <th class="ga_email">이메일</th>
                   <th class="ga_phone">휴대폰번호</th>
                   <!-- <th class="ga_date">가입일자</th> -->
@@ -121,10 +131,11 @@
                 <?php for($i=0; $i<20; $i++){ ?>
                 <!-- tr를 클릭하게되면 어디를 클릭해도 오른쪽 화면에 나타타게 해주세요 -->
                 <tr>
-                  <td class="ga_num">1</td>
+                  <td class="ga_num">001</td>
                   <td class="ga_name">버기</td>
                   <td class="ga_id">제로키친</td>
                   <td class="ga_location">대구</td>
+                  <td class="ga_businessName">제일제당</td>
                   <td class="ga_email">zerokitchen@naver.com</td>
                   <td class="ga_phone">010.1234.5122</td>
                   <!-- <td class="ga_date">21.10.21</td> -->
@@ -165,12 +176,18 @@
               </div>
               <a href="/web/member/modify.php" class="btn_white">수정</a>
             </div>
+            <div class="btn_box">
+              <div class="btn_type" id="modal-open">
+                <!-- <img src="/img/ico_bplus.svg" />-->
+                +계정생성
+              </div>
+            </div>
           </div>
           <div class="table_line">
             <ul>
               <li class="ad_line">
                 <div class="ad_table_tit">번호</div>
-                <div class="ad_num ad_table">1</div>
+                <div class="ad_num ad_table">001</div>
               </li>
               <li class="ad_line">
                 <div class="ad_table_tit">이름</div>
@@ -184,6 +201,18 @@
               <li class="ad_line">
                 <div class="ad_table_tit">운행지역</div>
                 <div class="ad_location ad_table">대구</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">사업자명</div>
+                <div class="ad_businessName ad_table">제일제당</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">사업자번호</div>
+                <div class="ad_businessNumber ad_table">220-81-83676</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">대표자명</div>
+                <div class="ad_CEOName ad_table">이중구</div>
               </li>
               <li class="ad_line">
                 <div class="ad_table_tit">이메일</div>
@@ -216,7 +245,282 @@
             </ul>
           </div>
         </div>
+        <div class="popup-wrap" id="popup">
+          <div class="popup">
+            <div class="popup-body">
+              <div class="list-wrap">
+                <table class="regi-tbl">
+                  <colgroup>
+                    <col style="width: 200px" />
+                    <col />
+                    <col style="width: 200px" />
+                    <col />
+                  </colgroup>
+                  <tr>
+                    <th>이름</th>
+                    <td colspan="3">
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="memberName"
+                          maxlength="30"
+                          placeholder="이름을 입력하세요"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>아이디</th>
+                    <td>등록 시 자동으로 부여됩니다.</td>
+                    <th>운행지역</th>
+                    <td>
+                      <select name="chargeLocation">
+                        <option value="SEO">서울</option>
+                        <option value="KK">경기</option>
+                        <option value="TK">대구/경북</option>
+                        <option value="PK">부산/경남</option>
+                        <option value="DC">대전/충청</option>
+                        <option value="GJ">광주/전라</option>
+                        <option value="UL">울산</option>
+                        <option value="KW">강원</option>
+                        <option value="JEJU">제주</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>이메일</th>
+                    <td colspan="3">
+                      <div class="input-box">
+                        <input type="text" name="emailId" maxlength="64" />
+                        <span>@</span>
+                        <input type="text" name="emailDomain" maxlength="255" />
+                        <button type="button">중복확인</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>휴대폰번호</th>
+                    <td colspan="3">
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="phNumber"
+                          maxlength="12"
+                          placeholder="- 없이 입력해주세요"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사업자명</th>
+                    <td>
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="businessName"
+                          maxlength="30"
+                          placeholder="사업자명을 입력해주세요"
+                        />
+                      </div>
+                    </td>
+                    <th>대표자명</th>
+                    <td>
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="CEOName"
+                          maxlength="30"
+                          placeholder="대표자명을 입력해주세요"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사업자 번호</th>
+                    <td colspan="3">
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="businessNumber"
+                          maxlength="30"
+                          placeholder="- 없이 입력해주세요"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>계좌번호</th>
+                    <td colspan="3">
+                      <div class="input-box">
+                        <select class="bk-sel">
+                          <option value="">은행 선택</option>
+                          <option value="ANONYMOUS">미확인은행</option>
+                          <option value="KDB">산업은행</option>
+                          <option value="IBK">기업은행</option>
+                          <option value="KB">국민은행</option>
+                          <option value="SUHYUP">수협</option>
+                          <option value="KEXIM">수출입은행</option>
+                          <option value="NH">NH농협은행</option>
+                          <option value="NHLOCAL">지역농축협</option>
+                          <option value="WOORI">우리은행</option>
+                          <option value="SC">SC제일은행</option>
+                          <option value="CITY">한국씨티은행</option>
+                          <option value="DAEGU">대구은행</option>
+                          <option value="PUSAN">부산은행</option>
+                          <option value="GWANGJU">광주은행</option>
+                          <option value="JEJU">제주은행</option>
+                          <option value="JEONBUK">전북은행</option>
+                          <option value="GYEONGNAM">경남은행</option>
+                          <option value="KFCC">새마을금고</option>
+                          <option value="CU">신협</option>
+                          <option value="SANGHO">상호저축은행</option>
+                          <option value="HSBC">HSBC은행</option>
+                          <option value="DEUTSCHE">도이치은행</option>
+                          <option value="NFCF">산림조합중앙회</option>
+                          <option value="EPOST">우체국</option>
+                          <option value="KEBHANA">KEB하나은행</option>
+                          <option value="SHINHAN">신한은행</option>
+                          <option value="KBANK">케이뱅크</option>
+                          <option value="KAKAO">카카오뱅크</option>
+                          <option value="YUANTA">유안타증권</option>
+                          <option value="KBSEC">KB증권</option>
+                          <option value="MIRAEDAEWOO">미래에셋대우증권</option>
+                          <option value="SAMSUNG">삼성증권</option>
+                          <option value="HANKOOK">한국투자증권</option>
+                          <option value="NH_INVEST">NH투자증권</option>
+                          <option value="KYOBO">교보증권</option>
+                          <option value="HI_INVEST">하이투자증권</option>
+                          <option value="HMC_INVEST">HMC투자증권</option>
+                          <option value="KIWOOM">키움증권</option>
+                          <option value="EBEST">이베스트투자증권</option>
+                          <option value="SK">SK증권</option>
+                          <option value="DAISHIN">대신증권</option>
+                          <option value="HANHWA">한화투자증권</option>
+                          <option value="HANA_INVEST">하나금융투자</option>
+                          <option value="SHINHAN_INVEST">신한금융투자</option>
+                          <option value="DONGBU">DB금융투자</option>
+                          <option value="EUGENE_INVEST">유진투자증권</option>
+                          <option value="MERITZ_COMPREHENSIVE">
+                            메리츠종합금융증권
+                          </option>
+                          <option value="BOOKOOK">부국증권</option>
+                          <option value="SHINYOUNG">신영증권</option>
+                          <option value="CAPE">케이프투자증권</option>
+                          <option value="TOSS">토스뱅크</option>
+                        </select>
+                        <input
+                          type="text"
+                          name="accountNumber"
+                          maxlength="20"
+                          placeholder="계좌번호 - 없이 입력"
+                        />
+                        <input
+                          type="text"
+                          name="accountOwner"
+                          placeholder="예금주"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>생년월일</th>
+                    <td colspan="3">
+                      <select
+                        id="select_year"
+                        onchange="javascript:lastday();"
+                        style="width: 102px"
+                      >
+                        <option value="">년도</option>
+                      </select>
+                      <select
+                        id="select_month"
+                        onchange="javascript:lastday();"
+                        style="width: 102px"
+                      >
+                        <option value="">월</option>
+                      </select>
+                      <select
+                        id="select_day"
+                        onchange="javascript:lastday();"
+                        style="width: 102px"
+                      >
+                        <option value="">일</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 생년월일 설정 -->
+                <script>
+                  var start_year = "1902"; // 시작할 년도
+                  var today = new Date();
+                  var today_year = today.getFullYear();
+                  var index = 0;
+                  for (var y = today_year; y >= start_year; y--) {
+                    //start_year ~ 현재 년도
+                    document.getElementById("select_year").options[index] =
+                      new Option(y, y);
+                    index++;
+                  }
+                  index = 0;
+                  for (var m = 1; m <= 12; m++) {
+                    document.getElementById("select_month").options[index] =
+                      new Option(m, m);
+                    index++;
+                  }
+
+                  lastday();
+
+                  function lastday() {
+                    //년과 월에 따라 마지막 일 구하기
+                    var Year = document.getElementById("select_year").value;
+                    var Month = document.getElementById("select_month").value;
+                    var day = new Date(
+                      new Date(Year, Month, 1) - 86400000
+                    ).getDate();
+                    /* = new Date(new Date(Year,Month,0)).getDate(); */
+
+                    var dayindex_len =
+                      document.getElementById("select_day").length;
+                    if (day > dayindex_len) {
+                      for (var i = dayindex_len; i <= day; i++) {
+                        document.getElementById("select_day").options[i - 1] =
+                          new Option(i, i);
+                      }
+                    } else if (day < dayindex_len) {
+                      for (var i = dayindex_len; i >= day; i--) {
+                        document.getElementById("select_day").options[i] = null;
+                      }
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="popup-foot">
+              <span
+                class="popup-btn confirm"
+                id="confirm"
+                onClick="window.confirm('계정을 생성하시겠습니까?');"
+                >생성</span
+              >
+              <span class="popup-btn close" id="close">취소</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      $(function () {
+        $("#modal-open").click(function () {
+          $("#popup").css("display", "flex").hide().fadeIn();
+        });
+        $("#close").click(function () {
+          modalClose();
+        });
+        function modalClose() {
+          $("#popup").fadeOut();
+        }
+      });
+    </script>
   </body>
 </html>

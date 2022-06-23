@@ -22,12 +22,13 @@
     ></script>
 
     <link rel="stylesheet" href="../css/super-m.css" />
-    <!-- <link rel="stylesheet" href="../../css/style.css" /> -->
+    <link rel="stylesheet" href="../css/manage.css" />
 
     <link
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="../jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header id="adheader">
@@ -42,7 +43,7 @@
     </header>
     <div class="tab_admenu">
       <ul>
-        <li><a href="./member.html">회원</a></li>
+        <li><a href="./member.html">회원관리</a></li>
         <li class="active"><a href="./order-manage.html">주문관리</a></li>
         <li><a href="">피자메뉴관리</a></li>
         <li><a href="/web/notice/">공지사항</a></li>
@@ -64,7 +65,115 @@
         <div class="sub_current">홈 > 주문현황</div>
         <h10>주문현황</h10>
       </div>
-      <div id="right_box"></div>
+      <div id="right_box">
+        <div class="list_search">
+          <div class="list_top">
+            <div class="search_ad">
+              <ul class="search_rbtn">
+                <li style="margin-right: 20px">
+                  <div class="search-head">방문여부</div>
+                  <div class="cate_ga ml_10">
+                    <select id="OrderIndex" name="OrderIndex" onchange="">
+                      <option>전체</option>
+                      <option>방문완료</option>
+                      <option>방문대기</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+              <ul class="search_rbtn">
+                <li>
+                  <div class="cate_ga ml_10">
+                    <select id="MemberSearch" name="OrderSearch" onchange="">
+                      <option>전체</option>
+                      <option>주문자명</option>
+                      <option>학교</option>
+                      <option>방문기사</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <input
+                    type="text"
+                    name="Keyword"
+                    value=""
+                    class="textbox2"
+                    placeholder=""
+                  />
+                  <input type="submit" value="검색" class="btn_type" />
+                  <input type="reset" value="초기화" class="btn_reset" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="list_box" style="width: auto; margin: 0">
+          <div class="ser_title">
+            검색결과수<span class="ser_count">999</span>
+          </div>
+          <div class="table_info">
+            <table>
+              <thead>
+                <tr>
+                  <th class="ga_num">주문번호</th>
+                  <th class="ga_name">주문자 이름</th>
+                  <th class="ga_school">방문학교</th>
+                  <th class="ga_phone">휴대폰번호</th>
+                  <th class="ga_visit">방문유무</th>
+                  <th class="ga_driver">방문기사</th>
+                  <th class="ga_date">방문날짜</th>
+                  <th class="ga_review">리뷰보기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php for($i=0; $i<20; $i++){ ?>
+                <!-- 방문이 완료되면 방문준비중에서 방문완료로 바뀌고 리뷰가 작성되면 리뷰를 볼 수 있게 합니다. -->
+                <tr class="order-tr">
+                  <td class="ga_num">0001</td>
+                  <td class="ga_name">홍승희</td>
+                  <td class="ga_school">계성고</td>
+                  <td class="ga_phone">010.1234.3214</td>
+                  <td class="ga_visit">방문준비중</td>
+                  <td class="ga_driver">최배달</td>
+                  <td class="ga_date">22.10.10</td>
+                  <td class="ga_review">리뷰</td>
+                </tr>
+                <tr class="order-tr">
+                  <td class="ga_num">0002</td>
+                  <td class="ga_name">송태민</td>
+                  <td class="ga_school">하나고</td>
+                  <td class="ga_phone">010.7896.4321</td>
+                  <td class="ga_visit">방문완료</td>
+                  <td class="ga_driver">최배달</td>
+                  <td class="ga_date">22.01.11</td>
+                  <td class="ga_review">리뷰</td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+            <div class="btn_wrap">
+              <div id="pageing" class="pagenation_wrap">
+                <ul>
+                  <li onclick="CheckSearch(1)">처음</li>
+                  <li onclick="CheckSearch(1)">이전</li>
+                  <li class="active">1</li>
+                  <li onclick="CheckSearch(2)">2</li>
+                  <li onclick="CheckSearch(3)">3</li>
+                  <li onclick="CheckSearch(4)">4</li>
+                  <li onclick="CheckSearch(5)">5</li>
+                  <li onclick="CheckSearch(6)">6</li>
+                  <li onclick="CheckSearch(7)">7</li>
+                  <li onclick="CheckSearch(8)">8</li>
+                  <li onclick="CheckSearch(9)">9</li>
+                  <li onclick="CheckSearch(10)">10</li>
+                  <li onclick="CheckSearch(2)">다음</li>
+                  <li onclick="CheckSearch(10)">끝</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

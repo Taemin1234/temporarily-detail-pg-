@@ -8,16 +8,15 @@ $border: 1px solid rgb(221, 221, 221);
 .regi-tbl {
   border: 0;
   border-top: $border;
+  width: 100%;
 
   tr {
     border-bottom: $border;
   }
 
   th {
-    width: 170px;
-    text-align: center;
     background-color: rgb(249, 249, 249);
-
+    border-bottom: $border;
     padding: 15px 5px;
 
     font-weight: 700px;
@@ -25,6 +24,8 @@ $border: 1px solid rgb(221, 221, 221);
 
   td {
     padding: 7px 10px;
+    border-bottom: $border;
+    text-align: left;
   }
 
   input {
@@ -42,4 +43,34 @@ $border: 1px solid rgb(221, 221, 221);
 
     cursor: pointer;
   }
+}
+
+.bk-sel {
+  width: 130px;
+}
+
+.popup-btn {
+  display: inline-block;
+  width: 150px;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.popup-btn.close {
+  background: #eee;
+  color: #555;
+}
+
+.search-head {
+  font-weight: 700;
+}
+
+.list_box .table_info .order-tr:hover {
+  pointer-events: none;
+  background-color: transparent;
 }

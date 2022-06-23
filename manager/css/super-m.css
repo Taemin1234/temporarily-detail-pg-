@@ -592,6 +592,8 @@ input.textbox::placeholder {
   text-align: center;
   color: #fff;
   font-weight: 500;
+
+  cursor: pointer;
 }
 .btn_reset {
   border: 1px solid #eee;
@@ -1424,9 +1426,7 @@ input.textbox {
 .search_ad .search_rbtn .cate_ga {
   display: inline-block;
 }
-.search_ad .search_rbtn {
-  width: 460px;
-}
+
 .search_ad .search_rbtn li,
 .search_ad .search_rbtn {
   display: flex;
@@ -2087,12 +2087,12 @@ input.textbox {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
   background: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
 }
 #popup .popup {
-  width: 65%;
+  width: 75%;
   background: #fff;
   border-radius: 5px;
   height: auto;
@@ -2103,6 +2103,11 @@ input.textbox {
   align-items: center;
   justify-content: center;
   padding: 35px 25px;
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #popup .popup .popup-body {
   width: 100%;
@@ -2116,6 +2121,7 @@ input.textbox {
 #popup .popup .popup-foot {
   width: 100%;
   margin-top: 3%;
+  text-align: right;
 }
 #popup .popup select {
   height: 40px;
@@ -2180,7 +2186,10 @@ input.textbox {
   margin: 0 auto;
   display: flex;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .web_box .web_right {
   background: url(../img/jeon.jpg) no-repeat;
