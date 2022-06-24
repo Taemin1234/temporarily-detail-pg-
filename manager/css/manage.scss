@@ -1,5 +1,21 @@
 $border: 1px solid rgb(221, 221, 221);
 
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .list-wrap {
   width: 100%;
   background-color: #fff;
@@ -70,7 +86,14 @@ $border: 1px solid rgb(221, 221, 221);
   font-weight: 700;
 }
 
-.list_box .table_info .order-tr:hover {
-  pointer-events: none;
-  background-color: transparent;
+.top-bar {
+  border-top: solid 1px #eee;
+}
+
+.ad_table2 {
+  width: 50%;
+  display: flex;
+  padding: 7px 10px;
+  align-items: center;
+  overflow: hidden;
 }
