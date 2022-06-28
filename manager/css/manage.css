@@ -93,3 +93,8 @@
 .list_box .table_line .block-dp {
   display: block;
 }
+
+.review-comment {
+  height: 200px;
+  padding: 15px;
+}
