@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라망피자-관리자</title>
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="../css/super-m.css" />
+    <link rel="stylesheet" href="../css/manage.css" />
+
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="../jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header id="adheader">
+      <nav>
+        <div class="admin_logo">라망피자</div>
+      </nav>
+      <div class="nav_login">
+        <!-- 로그인했을때 보여지는 상단 글입니다. 로그아웃도 가능해야합니다 -->
+        제로알님 환영합니다<span>| </span
+        ><a href="/web/fnc/logout.php">로그아웃</a>
+      </div>
+    </header>
+    <div class="tab_admenu">
+      <ul>
+        <li><a href="./member.html">회원관리</a></li>
+        <li class="active"><a href="./order-manage.html">주문관리</a></li>
+        <li><a href="">피자메뉴관리</a></li>
+        <li><a href="/web/notice/">공지사항</a></li>
+      </ul>
+    </div>
+
+    <!-- 본문 컨테이너 -->
+    <div id="adcontainer">
+      <div id="left_box">
+        <div class="sub_box">
+          <div class="cate_btit">주문관리</div>
+          <div class="cate_tit">
+            <a href="./order-manage.html">주문현황</a>
+          </div>
+          <div class="cate_tit active">
+            <a href="./review-manage.html">리뷰관리</a>
+          </div>
+        </div>
+      </div>
+      <div class="sub_sbox">
+        <div class="sub_current">홈 > 리뷰관리</div>
+        <h10>리뷰관리</h10>
+      </div>
+      <div id="right_box">
+        <div class="list_search">
+          <div class="list_top">
+            <div class="search_ad">
+              <ul class="search_rbtn">
+                <li>
+                  <div class="cate_ga ml_10">
+                    <select id="MemberSearch" name="OrderSearch" onchange="">
+                      <option>전체</option>
+                      <option>주문번호</option>
+                      <option>학교명</option>
+                      <option>방문기사</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <input
+                    type="text"
+                    name="Keyword"
+                    value=""
+                    class="textbox2"
+                    placeholder=""
+                  />
+                  <input type="submit" value="검색" class="btn_type" />
+                  <input type="reset" value="초기화" class="btn_reset" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="list_box">
+          <div class="ser_title">
+            검색결과수<span class="ser_count">999</span>
+          </div>
+          <div class="table_info">
+            <table>
+              <thead>
+                <tr>
+                  <th class="ga_num">주문번호</th>
+                  <th class="ga_loca1">지역 1</th>
+                  <th class="ga_loca2">지역 2</th>
+                  <th class="ga_school">학교명</th>
+                  <th class="ga_driver">방문기사</th>
+                  <th class="ga_date">방문날짜</th>
+                  <th class="ga_totalRating">총 평점</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php for($i=0; $i<20; $i++){ ?>
+                <!-- tr를 클릭하게되면 어디를 클릭해도 오른쪽 화면에 리뷰페이지가 나오게 해주세요 -->
+                <tr>
+                  <td class="ga_num">0001</td>
+                  <td class="ga_loca1">서울</td>
+                  <td class="ga_loca2">강남구</td>
+                  <td class="ga_school">휘문고</td>
+                  <td class="ga_driver">최배달</td>
+                  <td class="ga_date">22.10.10</td>
+                  <td class="ga_totalRating">5</td>
+                </tr>
+                <tr>
+                  <td class="ga_num">0002</td>
+                  <td class="ga_loca1">대구</td>
+                  <td class="ga_loca2">수성구</td>
+                  <td class="ga_school">고산중</td>
+                  <td class="ga_driver">최배달</td>
+                  <td class="ga_date">21.10.10</td>
+                  <td class="ga_totalRating">4</td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+            <div class="btn_wrap">
+              <div id="pageing" class="pagenation_wrap">
+                <ul>
+                  <li onclick="CheckSearch(1)">처음</li>
+                  <li onclick="CheckSearch(1)">이전</li>
+                  <li class="active">1</li>
+                  <li onclick="CheckSearch(2)">2</li>
+                  <li onclick="CheckSearch(3)">3</li>
+                  <li onclick="CheckSearch(4)">4</li>
+                  <li onclick="CheckSearch(5)">5</li>
+                  <li onclick="CheckSearch(6)">6</li>
+                  <li onclick="CheckSearch(7)">7</li>
+                  <li onclick="CheckSearch(8)">8</li>
+                  <li onclick="CheckSearch(9)">9</li>
+                  <li onclick="CheckSearch(10)">10</li>
+                  <li onclick="CheckSearch(2)">다음</li>
+                  <li onclick="CheckSearch(10)">끝</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list_box">
+          <div class="list_top">
+            <div class="btn_box">
+              <div
+                class="red btn_white"
+                onClick="window.confirm('삭제하시겠습니까?');"
+              >
+                삭제
+              </div>
+              <a href="/web/member/modify.php" class="btn_white">수정</a>
+            </div>
+          </div>
+          <div class="table_line">
+            <ul>
+              <li class="ad_line">
+                <div class="ad_table_tit">주문번호</div>
+                <div class="ad_num ad_table">001</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">지역 1</div>
+                <div class="ad_loca1 ad_table">서울</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">지역 2</div>
+                <div class="ad_loca2 ad_table">강남구</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">이름</div>
+                <div class="ad_name ad_table">홍승희</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">학교명</div>
+                <!-- 카카오 계정으로 가입하여 정보가 없거나 학교 소속이 아니면 미등록-->
+                <div class="ad_school ad_table">휘문고</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">방문기사</div>
+                <div class="ad_driver ad_table">최배달</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">방문날짜</div>
+                <div class="ad_visitDate ad_table">22.10.10</div>
+              </li>
+              <li class="ad_line">
+                <div class="ad_table_tit">총 평점</div>
+                <div class="ad_totalRating ad_table">4</div>
+              </li>
+              <li class="ad_line flex-column">
+                <div class="ad_table_tit" style="width: 100%">세부 평점</div>
+                <div style="width: 100%">
+                  <div class="flex-start top-bar">
+                    <div class="ad_ratingList ad_table2">기사</div>
+                    <div class="ad_table2 text-right"><span>20</span>점</div>
+                  </div>
+                  <div class="flex-start top-bar">
+                    <div class="ad_ratingList ad_table2">맛</div>
+                    <div class="ad_table2 text-right"><span>20</span>점</div>
+                  </div>
+                  <div class="flex-start top-bar">
+                    <div class="ad_ratingList ad_table2">위생</div>
+                    <div class="ad_table2 text-right"><span>20</span>점</div>
+                  </div>
+                  <div class="flex-start top-bar">
+                    <div class="ad_ratingList ad_table2">가격</div>
+                    <div class="ad_table2 text-right"><span>20</span>점</div>
+                  </div>
+                </div>
+              </li>
+              <li class="ad_line flex-column">
+                <div class="ad_table_tit" style="width: 100%">세부 평점</div>
+                <div class="review-comment" style="width: 100%">
+                  기사님이 친절하고 피자가 맛있어요!
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
