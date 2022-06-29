@@ -3,7 +3,7 @@ $border: 1px solid rgb(221, 221, 221);
 .flex-start {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
 }
@@ -112,4 +112,22 @@ $border: 1px solid rgb(221, 221, 221);
   height: 200px;
 
   padding: 15px;
+}
+
+.del-ready {
+  color: rgb(4, 161, 4);
+}
+
+.del-compl {
+  color: red;
+}
+
+.del-ing {
+  color: blue;
+}
+
+.piece-fig {
+  table {
+    width: 100%;
+  }
 }
